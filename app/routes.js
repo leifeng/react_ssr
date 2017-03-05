@@ -6,9 +6,11 @@ import Indexs from './routes/Index.js'
 import User from './routes/User.js';
 
 export default (
-  <Route path="/" component={RouterContainer}>
-    <IndexRoute component={Indexs} />
-    <Route path="/user" component={User} />
-  </Route>
+  <Router history={browserHistory}>
+    <Route path="/" component={RouterContainer}>
+      <IndexRoute component={Indexs} />
+      <Route path="/user" component={User} />
+    </Route>
+  </Router>
 )
 
